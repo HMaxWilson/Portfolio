@@ -2,12 +2,13 @@
 import ProjectCardThumbnail from "./ProjectCardThumbnail.vue";
 
 defineProps({
-  name: String,
   id: String,
-  staticImage: String,
-  animatedImage: String,
+  slug: String,
+  name: String,
   excerpt: String,
   description: String,
+  staticImage: String,
+  animatedImage: String,
   tools: Array,
   enabled: Boolean,
 })
@@ -21,7 +22,7 @@ defineProps({
     </div>
     <div class="project__blurb">
       <span class="project__title">
-        <RouterLink :to="`projects/` + id" class="link">{{ name }}</RouterLink>
+        <RouterLink :to="`projects/` + slug" class="link">{{ name }}</RouterLink>
       </span>
       <p>
         <b>Languages/Tools Used:</b> {{ tools.join(", ") }}

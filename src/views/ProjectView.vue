@@ -1,7 +1,14 @@
+<script setup>
+import { RouterLink } from "vue-router";
+import webProjects from "@/projects.json";
+
+console.log(webProjects);
+</script>
+
 <template>
   <body>
   <div class="page">
-    <h1 class="page__title">Amplify</h1>
+    <h1 class="page__title">{{ $route.params.id }}</h1>
     <p>
       <b>Date:</b> March 2022<br>
       <b>Languages/Tools Used:</b> PHP/CSS/JavaScript/MySQL/AJAX
@@ -27,9 +34,10 @@
       user to interact with the website. I used AJAX to create the asynchronous requests to the server,
       which would allow the website to be more responsive.
     </p>
-    <form style="margin-top: 10px;" action="/projects">
-      <input type="submit" value="Back" class="button">
-    </form>
+    <br>
+    <button class="button">
+      <RouterLink to="/projects">Back</RouterLink>
+    </button>
   </div>
   </body>
 </template>

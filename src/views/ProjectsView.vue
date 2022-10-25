@@ -1,27 +1,20 @@
 <script setup>
 import ProjectList from "../components/projects/ProjectList.vue";
 
-import webProjects from "@/projects.json";
+import projects from "@/projects.json";
+console.log(projects);
 </script>
 
 <template>
   <body>
     <div class="page">
-      <h1 class="page__title mb-4">Projects</h1>
-      <h2 class="page__subtitle mb-4">Website Development</h2>
-      <p>
-        Web development is my professional development area, it is something I
-        took up to assist in a previous workplace alongside my regular Software
-        Development role, which I found to take on quite well and enjoyed, so
-        fully made the move a few months later to pursue the new role, yet
-        full-time with the same company.
-      </p>
-      <ProjectList :projects="webProjects" />
-
-      <h2 class="page__subtitle">Python Development</h2>
-      <p>...Coming Soon...</p>
-      <ProjectList />
-
+      <div v-for="(item) in projects">
+        <h2 class="page__subtitle mb-4">{{ item.subtitle }}</h2>
+        <p>
+          {{ item.description }}
+        </p>
+        <ProjectList :projects="item.content" />
+      </div>
     </div>
   </body>
 </template>
