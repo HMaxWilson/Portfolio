@@ -3,6 +3,7 @@ import ProjectCardThumbnail from "./ProjectCardThumbnail.vue";
 
 defineProps({
   id: String,
+  category: String,
   slug: String,
   name: String,
   excerpt: String,
@@ -15,23 +16,25 @@ defineProps({
 </script>
 
 <template>
-  <li class="project__item" v-show="enabled">
-    <div class="project__thumbnail">
-      <ProjectCardThumbnail :src="staticImage" class="static" />
-      <ProjectCardThumbnail :src="animatedImage" class="animated" />
-    </div>
-    <div class="project__blurb">
-      <span class="project__title">
-        <RouterLink :to="`projects/` + slug" class="link">{{ name }}</RouterLink>
-      </span>
-      <p>
-        <b>Languages/Tools Used:</b> {{ tools.join(", ") }}
-      </p>
-      <p>
-        {{ excerpt }}
-      </p>
-    </div>
-  </li>
+  <RouterLink :to="`projects/` + category + `/` + slug">
+    <li class="project__item" v-show="enabled">
+      <div class="project__thumbnail">
+        <ProjectCardThumbnail :src="staticImage" class="static" />
+        <ProjectCardThumbnail :src="animatedImage" class="animated" />
+      </div>
+      <div class="project__blurb">
+        <span class="project__title">
+          <RouterLink :to="`projects/` + category + `/` + slug" class="link">{{ name }}</RouterLink>
+        </span>
+        <p class="my-2">
+          <b>Languages/Tools Used:</b> {{ tools.join(", ") }}
+        </p>
+        <p class="my-2">
+          {{ excerpt }}
+        </p>
+      </div>
+    </li>
+  </RouterLink>
 </template>
 
 <style scoped>

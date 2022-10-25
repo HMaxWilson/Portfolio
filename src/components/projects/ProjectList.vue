@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard.vue";
 
 defineProps({
   projects: Array,
+  category: String,
 })
 </script>
 
@@ -10,13 +11,15 @@ defineProps({
   <ul class="project__list">
     <ProjectCard
         v-for="project in projects"
-        :name="project.name"
         :id="project.id"
+        :category="category"
+        :slug="project.slug"
+        :name="project.name"
+        :excerpt="project.excerpt"
+        :description="project.description"
         :staticImage="project.staticImage"
         :animatedImage="project.animatedImage"
-        :excerpt="project.excerpt"
         :tools="project.tools"
-        :description="project.description"
         :enabled="project.enabled"
     />
   </ul>
