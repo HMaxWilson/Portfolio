@@ -3,16 +3,14 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <nav class="nav">
+  <nav class="nav flex bg-white overflow-x-auto">
     <div class="nav__list">
       <RouterLink to="/" class="nav__item">Home</RouterLink>
       <RouterLink to="/projects" class="nav__item">Projects</RouterLink>
     </div>
     <div class="nav__list">
       <a href="https://github.com/HMaxWilson" class="nav__item">GitHub</a>
-      <a href="https://www.linkedin.com/in/HMaxWilson" class="nav__item"
-        >LinkedIn</a
-      >
+      <a href="https://www.linkedin.com/in/HMaxWilson" class="nav__item">LinkedIn</a>
       <a href="mailto:Web.HMW@hotmail.com" class="nav__item">Email</a>
     </div>
   </nav>
@@ -20,10 +18,7 @@ import { RouterLink } from "vue-router";
 
 <style scoped>
 .nav {
-  background-color: white;
-  display: flex;
-  overflow-x: auto;
-  margin: var(--gutter) 0 calc(var(--gutter) * 4) 0;
+  margin: var(--gutter) 0 0 0;
   padding: 0 var(--gutter);
   transition: opacity 0.2s, transform 0.2s;
 }

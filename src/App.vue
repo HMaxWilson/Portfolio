@@ -4,11 +4,7 @@ import TheTopNav from "./components/layouts/TheTopNav.vue";
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <TheTopNav />
-    </div>
-  </header>
+  <TheTopNav />
 
   <RouterView />
 </template>
