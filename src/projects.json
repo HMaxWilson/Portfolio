@@ -50,7 +50,7 @@
             "excerpt": "An ongoing development into designing a blog website while utilizing Laravel.",
             "description": "",
             "staticImage": "/src/assets/projects/blog/admin.png",
-            "animatedImage": "/src/assets/projects/blog/admin.PNG",
+            "animatedImage": "",
             "githubUrl": "",
             "demoUrl": "",
             "created": "July 2022",

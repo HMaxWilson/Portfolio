@@ -19,8 +19,11 @@ defineProps({
   <RouterLink :to="`projects/` + category + `/` + slug">
     <li class="project__item" v-show="enabled">
       <div class="project__thumbnail">
-        <ProjectCardThumbnail :src="staticImage" class="static" />
-        <ProjectCardThumbnail :src="animatedImage" class="animated" />
+        <ProjectCardThumbnail v-if="staticImage !== ''" :src="staticImage" class="static" />
+        <ProjectCardThumbnail v-if="staticImage === ''" src="/src/assets/projects/placeholder-image-cropped.jpg" class="static" />
+        <ProjectCardThumbnail v-if="animatedImage !== ''" :src="animatedImage" class="animated" />
+        <ProjectCardThumbnail v-if="animatedImage === ''" src="/src/assets/projects/placeholder-image-cropped.jpg" class="animated" />
+
       </div>
       <div class="project__blurb">
         <span class="project__title">
