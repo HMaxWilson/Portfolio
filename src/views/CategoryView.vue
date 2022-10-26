@@ -10,12 +10,12 @@ const category = projects[route.params.category];
 <template>
   <body>
     <div class="page">
-      <button class="button">
+      <button class="button my-4">
         <RouterLink to="/projects">Back</RouterLink>
       </button>
-      <br />
-      <br />
-      <h2 class="page__subtitle mb-4">{{ category.subtitle }}</h2>
+      <h2 class="page__subtitle text-2xl uppercase my-4">
+        {{ category.subtitle }}
+      </h2>
       <p>
         {{ category.description }}
       </p>

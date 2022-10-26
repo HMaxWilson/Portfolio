@@ -96,24 +96,6 @@
             "CSS"
           ],
           "enabled": true
-        },
-        "testing": {
-          "id": 6,
-          "slug": "parallax",
-          "name": "Parallax",
-          "excerpt": "A look into Parallax Scrolling, an effect which can look great when utilised correctly.",
-          "description": "",
-          "staticImage": "/src/assets/projects/parallax/parallax.png",
-          "animatedImage": "/src/assets/projects/parallax/preview.gif",
-          "githubUrl": "",
-          "demoUrl": "",
-          "created": "March 2022",
-          "tools": [
-            "HTML",
-            "JavaScript",
-            "CSS"
-          ],
-          "enabled": true
         }
     }
   },
