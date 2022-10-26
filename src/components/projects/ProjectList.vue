@@ -2,25 +2,25 @@
 import ProjectCard from "./ProjectCard.vue";
 
 defineProps({
-  projects: Array,
+  projects: Object,
   category: String,
-})
+});
 </script>
 
 <template>
   <ul class="project__list">
     <ProjectCard
-        v-for="project in projects"
-        :id="project.id"
-        :category="category"
-        :slug="project.slug"
-        :name="project.name"
-        :excerpt="project.excerpt"
-        :description="project.description"
-        :staticImage="project.staticImage"
-        :animatedImage="project.animatedImage"
-        :tools="project.tools"
-        :enabled="project.enabled"
+      v-for="project in projects"
+      :id="project.id"
+      :category="category"
+      :slug="project.slug"
+      :name="project.name"
+      :excerpt="project.excerpt"
+      :description="project.description"
+      :staticImage="project.staticImage"
+      :animatedImage="project.animatedImage"
+      :tools="project.tools"
+      :enabled="project.enabled"
     />
   </ul>
 </template>

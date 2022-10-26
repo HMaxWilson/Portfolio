@@ -2,15 +2,12 @@
 defineProps({
   src: String,
   alt: String,
-})
+});
 </script>
 
 <template>
-  <img
-      class="w-full h-full"
-      :src=src
-      :alt=alt
-  />
+  <img v-if="!!src" class="w-full h-auto" :src="src" :alt="alt" />
+  <img v-else class="w-full h-auto" src="/src/assets/projects/placeholder.jpg" />
 </template>
 
 <style scoped>
