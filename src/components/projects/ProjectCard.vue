@@ -22,7 +22,7 @@ defineProps({
   <RouterLink v-if="enabled" :to="`/projects/` + category + `/` + slug" class="border-b-[1px] border-dashed">
     <li class="project__item mt-8 peer hover:scale-105 ease-in-out duration-100">
       <div class="project__thumbnail peer-hover:scale-50">
-        <ProjectCardThumbnail :src="animatedImage" />
+        <ProjectCardThumbnail :src="animatedImage" :alt="name + ` Thumbnail`" />
       </div>
       <div v-if="!!name || !!tools || !!excerpt" class="my-4 px-1">
         <RouterLink v-if="!!slug" :to="`/projects/` + category + `/` + slug" class="link font-bold">{{ name }}</RouterLink>

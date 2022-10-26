@@ -7,7 +7,7 @@ defineProps({
 
 <template>
   <img v-if="!!src" class="w-full h-auto" :src="src" :alt="alt" />
-  <img v-else class="w-full h-auto" src="/src/assets/projects/placeholder.jpg" />
+  <img v-else class="w-full h-auto" src="/src/assets/projects/placeholder.jpg" alt="Placeholder Thumbnail" />
 </template>
 
 <style scoped>
