@@ -13,14 +13,13 @@ const category = projects[route.params.category];
       <button class="button my-4">
         <RouterLink to="/projects">Back</RouterLink>
       </button>
-
       <h2 class="page__subtitle text-2xl uppercase my-4">
         {{ category.subtitle }}
       </h2>
       <p>
         {{ category.description }}
       </p>
-      <ProjectList :projects="category.content" :category="category.category" />
+      <ProjectList :projects="category.content" :category="category.name" />
     </div>
   </body>
 </template>

@@ -5,7 +5,10 @@ defineProps({
   id: Number,
   category: String,
   slug: String,
-  name: String,
+  name: {
+    type: String,
+    required: true,
+  },
   excerpt: String,
   description: String,
   staticImage: String,
@@ -16,14 +19,14 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink v-if="enabled" :to="`projects/` + category + `/` + slug" class="border-b-[1px] border-dashed">
+  <RouterLink v-if="enabled" :to="`/projects/` + category + `/` + slug" class="border-b-[1px] border-dashed">
     <li class="project__item">
       <div class="project__thumbnail">
         <ProjectCardThumbnail :src="staticImage" class="static" />
         <ProjectCardThumbnail :src="animatedImage" class="animated" />
       </div>
       <div v-if="!!name || !!tools || !!excerpt" class="my-4">
-        <RouterLink v-if="!!name" :to="`projects/` + category + `/` + slug" class="link font-bold">{{ name }}</RouterLink>
+        <RouterLink v-if="!!slug" :to="`/projects/` + category + `/` + slug" class="link font-bold">{{ name }}</RouterLink>
         <p v-if="!!tools" class="my-2"><b>Languages/Tools Used:</b> {{ tools.join(", ") }}</p>
         <p v-if="!!excerpt" class="my-2">{{ excerpt }}</p>
       </div>
