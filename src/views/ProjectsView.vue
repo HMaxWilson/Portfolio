@@ -8,20 +8,20 @@ import projects from "@/projects.json";
 <template>
   <body>
     <div class="page">
-      <div v-for="item in projects" class="mb-16">
+      <div v-for="(category, index) in projects" class="mb-16">
         <h2 class="page__subtitle text-2xl uppercase my-4">
-          <RouterLink :to="`/projects/` + item.category">
-            {{ item.subtitle }}
+          <RouterLink :to="`/projects/` + category.name">
+            {{ category.subtitle }}
           </RouterLink>
         </h2>
         <p class="tracking-tight">
-          {{ item.description }}
+          {{ category.description }}
         </p>
-        <ProjectList :projects="item.content" :category="item.category" />
+        <ProjectList :projects="category.content" :category="category.name" />
 
         <button class="button float-right my-8">
-          <RouterLink :to="`/projects/` + item.category">
-           More {{ item.category }}
+          <RouterLink :to="`/projects/` + category.name">
+            More {{ category.name }}
           </RouterLink>
         </button>
       </div>

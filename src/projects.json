@@ -1,7 +1,7 @@
 {
   "web": {
     "subtitle": "Web Development",
-    "category": "web",
+    "name": "web",
     "description": "Web development is my professional development area, it is something I took up to assist in a previous workplace alongside my regular Software Development role, which I found to take on quite well and enjoyed, so fully made the move a few months later to pursue the new role, yet full-time with the same company.",
     "content": {
         "portfolio": {
@@ -120,7 +120,7 @@
   },
   "python": {
       "subtitle": "Python Development",
-      "category": "python",
+      "name": "python",
       "description": "...Coming Soon...",
       "content": {
           "blackjack": {
