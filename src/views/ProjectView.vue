@@ -10,25 +10,27 @@ const project = projects[route.params.category].content[route.params.id];
 
 <template>
   <body>
-    <div class="page">
-      <h1 v-show="!!project.name" class="page__title">{{ project.name }}</h1>
-      <div v-show="!!project.created || !!project.tools" class="my-4">
-        <p v-show="!!project.created">Date: {{ project.created }}</p>
-        <p v-show="!!project.tools">Languages/Tools Used: {{ project.tools.join(', ')}}</p>
-      </div>
-      <div v-show="!!project.githubUrl || !!project.demoUrl" class="mb-4">
+    <div class="page grid grid-cols-4 gap-5">
+      <div v-show="!!project.githubUrl || !!project.demoUrl" class="mb-4 col-span-5">
         <Link v-show="!!project.githubUrl" :href="`${project.githubUrl}`" target="_blank" class="button mr-4">View Source</Link>
         <Link v-show="!!project.demoUrl" :href="`${project.demoUrl}`" target="_blank" class="button">View Project</Link>
       </div>
-
-      <div v-show="!!project.animatedImage || !!project.description">
+      <div v-show="!!project.name || !!project.create || !!project.tools" class="col-span-2">
+        <h1 v-show="!!project.name" class="page__title">{{ project.name }}</h1>
+        <div v-show="!!project.created || !!project.tools" class="my-4">
+          <p v-show="!!project.created">Date: {{ project.created }}</p>
+          <p v-show="!!project.tools">Languages/Tools Used: {{ project.tools.join(', ')}}</p>
+        </div>
+      </div>
+      <div v-show="!!project.animatedImage" class="col-span-3">
         <ProjectCardThumbnail v-show="!!project.animatedImage" :src="project.animatedImage" />
+      </div>
+
+      <div v-show="!!project.description" class="col-span-5">
         <div class="my-4" v-html="project.description" />
       </div>
 
-      <button class="button">
-        <RouterLink to="/projects">Back</RouterLink>
-      </button>
+      <RouterLink to="/projects" class="button col-span-5 text-center w-16">Back</RouterLink>
     </div>
   </body>
 </template>
