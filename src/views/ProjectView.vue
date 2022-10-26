@@ -18,8 +18,8 @@ const project = projects[route.params.category].content[route.params.id];
       <div v-show="!!project.name || !!project.create || !!project.tools" class="col-span-2">
         <h1 v-show="!!project.name" class="page__title">{{ project.name }}</h1>
         <div v-show="!!project.created || !!project.tools" class="my-4">
-          <p v-show="!!project.created">Date: {{ project.created }}</p>
-          <p v-show="!!project.tools">Languages/Tools Used: {{ project.tools.join(', ')}}</p>
+          <p v-show="!!project.created"><b>Date:</b> {{ project.created }}</p>
+          <p v-show="!!project.tools"><b>Languages/Tools Used:</b> {{ project.tools.join(', ')}}</p>
         </div>
       </div>
       <div v-show="!!project.animatedImage" class="col-span-3">
