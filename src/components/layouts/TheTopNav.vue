@@ -1,17 +1,18 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import Link from "./Link.vue";
 </script>
 
 <template>
-  <nav class="nav flex bg-white overflow-x-auto">
+  <nav class="nav flex bg-white text-gray-700 overflow-x-auto">
     <div class="nav__list">
-      <RouterLink to="/" class="nav__item">Home</RouterLink>
-      <RouterLink to="/projects" class="nav__item">Projects</RouterLink>
+      <RouterLink to="/" class="nav__item hover:text-black">Home</RouterLink>
+      <RouterLink to="/projects" class="nav__item hover:text-black">Projects</RouterLink>
     </div>
     <div class="nav__list">
-      <a href="https://github.com/HMaxWilson" class="nav__item">GitHub</a>
-      <a href="https://www.linkedin.com/in/HMaxWilson" class="nav__item">LinkedIn</a>
-      <a href="mailto:Web.HMW@hotmail.com" class="nav__item">Email</a>
+      <Link href="https://github.com/HMaxWilson" target="_blank" class="nav__item">GitHub</Link>
+      <Link href="https://www.linkedin.com/in/HMaxWilson" target="_blank" class="nav__item">LinkedIn</Link>
+      <Link href="mailto:Web.HMW@hotmail.com" class="nav__item">Email</Link>
     </div>
   </nav>
 </template>
