@@ -2,7 +2,7 @@
 import ProjectCardThumbnail from "./ProjectCardThumbnail.vue";
 
 defineProps({
-  id: String,
+  id: Number,
   category: String,
   slug: String,
   name: String,
@@ -10,31 +10,22 @@ defineProps({
   description: String,
   staticImage: String,
   animatedImage: String,
-  tools: Array,
+  tools: Object,
   enabled: Boolean,
-})
+});
 </script>
 
 <template>
-  <RouterLink :to="`projects/` + category + `/` + slug">
-    <li class="project__item" v-show="enabled">
+  <RouterLink v-if="enabled" :to="`projects/` + category + `/` + slug" class="border-b-[1px] border-dashed">
+    <li class="project__item">
       <div class="project__thumbnail">
-        <ProjectCardThumbnail v-if="staticImage !== ''" :src="staticImage" class="static" />
-        <ProjectCardThumbnail v-if="staticImage === ''" src="/src/assets/projects/placeholder-image-cropped.jpg" class="static" />
-        <ProjectCardThumbnail v-if="animatedImage !== ''" :src="animatedImage" class="animated" />
-        <ProjectCardThumbnail v-if="animatedImage === ''" src="/src/assets/projects/placeholder-image-cropped.jpg" class="animated" />
-
+        <ProjectCardThumbnail :src="staticImage" class="static" />
+        <ProjectCardThumbnail :src="animatedImage" class="animated" />
       </div>
-      <div class="project__blurb">
-        <span class="project__title">
-          <RouterLink :to="`projects/` + category + `/` + slug" class="link">{{ name }}</RouterLink>
-        </span>
-        <p class="my-2">
-          <b>Languages/Tools Used:</b> {{ tools.join(", ") }}
-        </p>
-        <p class="my-2">
-          {{ excerpt }}
-        </p>
+      <div v-if="!!name || !!tools || !!excerpt" class="my-4">
+        <RouterLink v-if="!!name" :to="`projects/` + category + `/` + slug" class="link font-bold">{{ name }}</RouterLink>
+        <p v-if="!!tools" class="my-2"><b>Languages/Tools Used:</b> {{ tools.join(", ") }}</p>
+        <p v-if="!!excerpt" class="my-2">{{ excerpt }}</p>
       </div>
     </li>
   </RouterLink>
@@ -50,18 +41,5 @@ defineProps({
 .project__item:hover {
   background-color: rgb(0, 0, 0, 0.02);
   transition-duration: 0.1s;
-}
-
-.project__blurb {
-  margin-top: var(--gutter);
-}
-
-.project__title {
-  font-weight: var(--weight-bold);
-}
-
-.project__end {
-  padding: 1.5rem 0 1rem 0;
-  border-bottom: 1px dashed var(--border-color-light);
 }
 </style>
