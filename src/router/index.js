@@ -3,26 +3,10 @@ import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: "/",
-      name: "home",
-      component: () => import("../views/HomeView.vue"),
-    },
-    {
-      path: "/projects",
-      name: "projects",
-      component: () => import("../views/ProjectsView.vue"),
-    },
-    {
-      path: "/projects/:category/",
-      name: "category",
-      component: () => import("../views/CategoryView.vue"),
-    },
-    {
-      path: "/projects/:category/:id",
-      name: "project",
-      component: () => import("../views/ProjectView.vue"),
-    },
+    { path: "/", component: () => import("../views/HomeView.vue"), name: "Home" },
+    { path: "/projects", component: () => import("../views/ProjectsView.vue"), name: "Projects" },
+    { path: "/projects/:category/", component: () => import("../views/CategoryView.vue"), name: "Category" },
+    { path: "/projects/:category/:id", component: () => import("../views/ProjectView.vue"), name: "Project" },
   ],
 });
 
