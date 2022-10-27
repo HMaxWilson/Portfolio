@@ -19,7 +19,7 @@ import projects from "@/projects.json";
         </p>
         <ProjectList :projects="category.content" :category="category.name" />
 
-        <button class="button float-right my-8">
+        <button v-if="category.content.length > 3" class="button float-right my-8">
           <RouterLink :to="`/projects/` + category.name">
             More {{ category.name }}
           </RouterLink>

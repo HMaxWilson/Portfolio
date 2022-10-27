@@ -3,30 +3,30 @@
     "subtitle": "Web Development",
     "name": "web",
     "description": "Web development is my professional development area, it is something I took up to assist in a previous workplace alongside my regular Software Development role, which I found to take on quite well and enjoyed, so fully made the move a few months later to pursue the new role, yet full-time with the same company.",
-    "content": {
-        "portfolio": {
-          "id": 0,
-          "slug": "portfolio",
-          "name": "Portfolio",
-          "excerpt": "A look into the project you're currently looking at!",
-          "description": "...Coming Soon...",
-          "staticImage": "",
-          "animatedImage": "",
-          "githubUrl": "https://github.com/HMaxWilson/Portfolio",
-          "demoUrl": null,
-          "created": "October 2022",
-          "tools": [
-            "JSON",
-            "Vue3",
-            "TailwindCSS",
-            "Vite"
-          ],
-          "enabled": true
+    "content": [
+       {
+         "name": "Portfolio",
+         "slug": "portfolio",
+         "id": 0,
+         "excerpt": "A look into the project you're currently looking at!",
+         "description": "...Coming Soon...",
+         "staticImage": "",
+         "animatedImage": "",
+         "githubUrl": "https://github.com/HMaxWilson/Portfolio",
+         "demoUrl": null,
+         "created": "October 2022",
+         "tools": [
+          "JSON",
+          "Vue3",
+          "TailwindCSS",
+          "Vite"
+         ],
+         "enabled": true
         },
-        "gallery": {
-          "id": 1,
-          "slug": "gallery",
+        {
           "name": "Gallery",
+          "slug": "gallery",
+          "id": 1,
           "excerpt": "An introduction to Object-Oriented PHP, by Edwin Diaz, available on Udemy.",
           "description": "...Coming Soon...",
           "staticImage": "/src/assets/projects/gallery/home.png",
@@ -42,10 +42,10 @@
           ],
           "enabled": true
         },
-        "amplify": {
-          "id": 2,
-          "slug": "amplify",
+        {
           "name": "Amplify",
+          "slug": "amplify",
+          "id": 2,
           "excerpt": "A follow along project replicating Spotify 2017, by Reece Kenney, available on Udemy.",
           "description": "<p>During my time refining my object-oriented programming skills, I decided to follow along with a project course, in which I followed along in creating a copy of Spotify 2017, a music streaming service. I wanted to create a service that would allow users to create their own playlists and listen to their music.</p> <br /> <p>To create this project, I used PHP, MySQL, CSS, JavaScript and AJAX. I used PHP to create the backend of the website, which would handle the user authentication and the database queries. I used MySQL to store the data for the website, which would store the user information, the songs and the playlists. I used CSS to style the website, which would allow the website to look almost identical to that which I was replicating, with minor changes for personal styling choices. I used JavaScript to create the front-end of the website, which would allow the user to interact with the website. I used AJAX to create the asynchronous requests to the server, which would allow the website to be more responsive.</p>",
           "staticImage": "/src/assets/projects/amplify/home.png",
@@ -62,46 +62,46 @@
           ],
           "enabled": true
         },
-        "blog": {
-            "id": 3,
-            "slug": "blog",
-            "name": "Blog",
-            "excerpt": "An ongoing development into designing a blog website while utilizing Laravel.",
-            "description": "...Coming Soon...",
-            "staticImage": "",
-            "animatedImage": "",
-            "githubUrl": "https://github.com/HMaxWilson/Blog",
-            "demoUrl": "",
-            "created": "July 2022",
-            "tools": [
-              "Laravel",
-              "MySQL",
-              "TailwindCSS"
-            ],
-            "enabled": true
+        {
+          "name": "Blog",
+          "slug": "blog",
+          "id": 3,
+          "excerpt": "An ongoing development into designing a blog website while utilizing Laravel.",
+          "description": "...Coming Soon...",
+          "staticImage": "",
+          "animatedImage": "",
+          "githubUrl": "https://github.com/HMaxWilson/Blog",
+          "demoUrl": "",
+          "created": "July 2022",
+          "tools": [
+            "Laravel",
+            "MySQL",
+            "TailwindCSS"
+          ],
+          "enabled": true
         },
-        "igdb": {
-            "id": 4,
-            "slug": "igdb",
-            "name": "IGDB",
-            "excerpt": "An ongoing development into creating a video game aggregator using a 3rd party API in a project.",
-            "description": "...Coming Soon...",
-            "staticImage": "/src/assets/projects/igdb/borderlands.png",
-            "animatedImage": "/src/assets/projects/igdb/preview.gif",
-            "githubUrl": "https://github.com/HMaxWilson/IGDB",
-            "demoUrl": "",
-            "created": "August 2022",
-            "tools": [
-              "Laravel",
-              "IGDB API4",
-              "TailwindCSS"
-            ],
-            "enabled": true
+        {
+          "name": "IGDB",
+          "slug": "igdb",
+          "id": 4,
+          "excerpt": "An ongoing development into creating a video game aggregator using a 3rd party API in a project.",
+          "description": "...Coming Soon...",
+          "staticImage": "/src/assets/projects/igdb/borderlands.png",
+          "animatedImage": "/src/assets/projects/igdb/preview.gif",
+          "githubUrl": "https://github.com/HMaxWilson/IGDB",
+          "demoUrl": "",
+          "created": "August 2022",
+          "tools": [
+            "Laravel",
+            "IGDB API4",
+            "TailwindCSS"
+          ],
+          "enabled": true
         },
-        "parallax": {
-            "id": 5,
-            "slug": "parallax",
+        {
             "name": "Parallax",
+            "slug": "parallax",
+            "id": 5,
             "excerpt": "A look into Parallax Scrolling, an effect which can look great when utilised correctly.",
             "description": "...Coming Soon...",
             "staticImage": "/src/assets/projects/parallax/parallax.png",
@@ -116,29 +116,29 @@
             ],
             "enabled": true
         }
-    }
+    ]
   },
   "python": {
       "subtitle": "Python Development",
       "name": "python",
       "description": "...Coming Soon...",
-      "content": {
-          "blackjack": {
-              "id": 6,
-              "slug": "blackjack",
-              "name": "Blackjack",
-              "excerpt": "",
-              "description": "",
-              "staticImage": "",
-              "animatedImage": "",
-              "githubUrl": "",
-              "demoUrl": "",
-              "created": "September 2022",
-              "tools": [
-                "Python"
-              ],
-              "enabled": true
+      "content": [
+          {
+            "name": "Blackjack",
+            "slug": "blackjack",
+            "id": 6,
+            "excerpt": "",
+            "description": "",
+            "staticImage": "",
+            "animatedImage": "",
+            "githubUrl": "",
+            "demoUrl": "",
+            "created": "September 2022",
+            "tools": [
+              "Python"
+            ],
+            "enabled": true
           }
-      }
+      ]
   }
 }
