@@ -4,17 +4,16 @@ import Link from "./Link.vue";
 </script>
 
 <template>
-  <nav class="nav flex bg-white text-gray-700 overflow-x-auto">
-    <div class="nav__list">
-      <RouterLink to="/" class="nav__item hover:text-black">Home</RouterLink>
-      <RouterLink to="/projects" class="nav__item hover:text-black">Projects</RouterLink>
-    </div>
-    <div class="nav__list">
-      <Link href="https://github.com/HMaxWilson" target="_blank" class="nav__item">GitHub</Link>
-      <Link href="https://www.linkedin.com/in/HMaxWilson" target="_blank" class="nav__item">LinkedIn</Link>
-      <Link href="mailto:Web.HMW@hotmail.com" class="nav__item">Email</Link>
-    </div>
-  </nav>
+    <nav class="nav flex bg-white text-gray-700 overflow-x-auto">
+      <div class="nav__list">
+        <RouterLink to="/" class="nav__item hover:text-black">Home</RouterLink>
+        <RouterLink to="/projects" class="nav__item hover:text-black">Projects</RouterLink>
+      </div>
+      <div class="nav__list">
+        <Link href="https://www.linkedin.com/in/HMaxWilson" target="_blank" class="nav__item">LinkedIn</Link>
+        <Link href="mailto:Web.HMW@hotmail.com" class="nav__item">Email</Link>
+      </div>
+    </nav>
 </template>
 
 <style scoped>
