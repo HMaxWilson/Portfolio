@@ -32,7 +32,7 @@
         "staticImage": "/src/assets/projects/gallery/home.png",
         "animatedImage": "/src/assets/projects/gallery/admin.gif",
         "githubUrl": "https://github.com/HMaxWilson/Gallery",
-        "demoUrl": "https://gallery.hgwmw.co.uk",
+        "demoUrl": "https://gallery.hmaxwilson.dev",
         "created": "November 2021",
         "tools": [
           "PHP",
@@ -51,7 +51,7 @@
         "staticImage": "/src/assets/projects/amplify/home.png",
         "animatedImage": "/src/assets/projects/amplify/preview.gif",
         "githubUrl": "https://github.com/HMaxWilson/Amplify",
-        "demoUrl": "https://amplify.hgwmw.co.uk",
+        "demoUrl": "https://amplify.hmaxwilson.dev",
         "created": "March 2022",
         "tools": [
           "PHP",
@@ -89,7 +89,7 @@
         "staticImage": "/src/assets/projects/igdb/borderlands.png",
         "animatedImage": "/src/assets/projects/igdb/preview.gif",
         "githubUrl": "https://github.com/HMaxWilson/IGDB",
-        "demoUrl": "",
+        "demoUrl": "igdb.hmaxwilson.dev",
         "created": "August 2022",
         "tools": [
           "Laravel",
@@ -107,7 +107,7 @@
         "staticImage": "/src/assets/projects/parallax/parallax.png",
         "animatedImage": "/src/assets/projects/parallax/preview.gif",
         "githubUrl": "",
-        "demoUrl": "https://nomad.hgwmw.co.uk",
+        "demoUrl": "https://parallax.hmaxwilson.dev",
         "created": "March 2022",
         "tools": [
           "HTML",
