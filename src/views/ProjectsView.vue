@@ -8,7 +8,7 @@ import projects from "@/projects.json";
 <template>
   <body>
     <div class="page">
-      <div v-for="(category, index) in projects" class="mb-16">
+      <div v-for="(category, index) in projects" class="pb-16">
         <h2 class="page__subtitle text-2xl uppercase my-4">
           <RouterLink :to="`/projects/` + category.name">
             {{ category.subtitle }}

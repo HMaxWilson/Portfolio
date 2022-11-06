@@ -17,8 +17,7 @@ defineProps({
       :name="project.name"
       :excerpt="project.excerpt"
       :description="project.description"
-      :staticImage="project.staticImage"
-      :animatedImage="project.animatedImage"
+      :previewImage="project.previewImage"
       :tools="project.tools"
       :enabled="project.enabled"
     />

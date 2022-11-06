@@ -4,7 +4,7 @@ import Link from "./Link.vue";
 </script>
 
 <template>
-    <nav class="nav flex bg-white text-gray-700 overflow-x-auto">
+    <nav class="nav flex text-gray-700 overflow-x-auto">
       <div class="nav__list">
         <RouterLink to="/" class="nav__item hover:text-black">Home</RouterLink>
         <RouterLink to="/projects" class="nav__item hover:text-black">Projects</RouterLink>

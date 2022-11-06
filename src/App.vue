@@ -4,7 +4,7 @@ import TheTopNav from "./components/layouts/TheTopNav.vue";
 </script>
 
 <template>
-  <div class="border-t-8 border-[#37B2AB]">
+  <div class="border-t-8 border-[#37B2AB] min-h-screen bg-gray-200">
     <TheTopNav />
 
     <RouterView />

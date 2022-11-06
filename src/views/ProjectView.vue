@@ -1,6 +1,5 @@
 <script setup>
 import { useRoute, RouterLink } from "vue-router";
-import ProjectCardThumbnail from "@/components/projects/ProjectCardThumbnail.vue";
 import Link from "@/components/layouts/Link.vue";
 
 import projects from "@/projects.json";
@@ -22,8 +21,8 @@ const project = projects[route.params.category].content[route.params.id];
           <p v-show="!!project.tools"><b>Languages/Tools Used:</b> {{ project.tools.join(', ')}}</p>
         </div>
       </div>
-      <div v-show="!!project.animatedImage" class="col-span-3">
-        <ProjectCardThumbnail v-show="!!project.animatedImage" :src="project.animatedImage" />
+      <div v-show="!!project.previewImage" class="col-span-3">
+        <img v-if="!!project.previewImage" class="w-full h-auto" :src="project.previewImage" :alt="project.name + ` Thumbnail`" />
       </div>
 
       <div v-show="!!project.description" class="col-span-5">
